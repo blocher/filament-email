@@ -1,14 +1,3 @@
-<x-filament-forms::field-wrapper
-    :id="$this->getId()"
-    label=""
-    :label-sr-only="$this->isLabelHidden()"
-    :helper-text="$this->getHelperText()"
-    :hint="$this->getHint()"
-    :hint-icon="$this->getHintIcon()"
-    :required="$this->isRequired()"
-    :state-path="$this->getStatePath()"
->
-    <div>
-        <iframe style="width: 100%; height:75vh;" srcdoc="{{ $this->getState() }}" seamless frameborder="0"></iframe>
-    </div>
-</x-filament-forms::field-wrapper>
+<div style="width: 100%; height: 75vh;">
+    <iframe srcdoc="{{ $email->html ?? '' }}" style="width: 100%; height: 100%;" seamless frameborder="0"></iframe>
+</div>
