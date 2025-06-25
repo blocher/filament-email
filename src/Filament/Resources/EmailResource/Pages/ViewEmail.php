@@ -55,10 +55,4 @@ class ViewEmail extends ViewRecord
         ];
     }
 
-    // public function render(): View
-    // {
-    //     return view('filament-email::html_view', [
-    //         'email' => $this->record,
-    //     ])->layout(Filament::getCurrentPanel()?->getLayout());
-    // }
 }
