@@ -12,7 +12,7 @@ use RickDBCN\FilamentEmail\Filament\Resources\Actions\PreviousAction;
 use RickDBCN\FilamentEmail\Filament\Resources\Concernes\CanPaginateViewRecord;
 use RickDBCN\FilamentEmail\Filament\Resources\EmailResource;
 use RickDBCN\FilamentEmail\Models\Email;
-use RickDBCN\FilamentEmail\Filament\Resources\EmailResource\Pages\View;
+use Illuminate\Contracts\View\View;
 
 class ViewEmail extends ViewRecord
 {
