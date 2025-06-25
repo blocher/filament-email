@@ -52,4 +52,11 @@ class ViewEmail extends ViewRecord
             NextAction::make(),
         ];
     }
+
+    public function render(): View
+{
+    return view('filament-email::html_view', [
+        'email' => $this->record, // assuming $this->record is your Email model
+    ]);
+}
 }
