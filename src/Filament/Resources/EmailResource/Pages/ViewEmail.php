@@ -6,6 +6,7 @@ use Filament\Support\Enums\Size;
 use Filament\Actions\Action;
 use Filament\Notifications\Notification;
 use Filament\Resources\Pages\ViewRecord;
+use Filament\Facades\Filament;
 use Illuminate\Support\Facades\Storage;
 use RickDBCN\FilamentEmail\Filament\Resources\Actions\NextAction;
 use RickDBCN\FilamentEmail\Filament\Resources\Actions\PreviousAction;
@@ -55,9 +56,9 @@ class ViewEmail extends ViewRecord
     }
 
     public function render(): View
-{
-    return view('filament-email::html_view', [
-        'email' => $this->record,
-    ])->layout(Filament::getCurrentPanel()?->getLayout());
-}
+    {
+        return view('filament-email::html_view', [
+            'email' => $this->record,
+        ])->layout(Filament::getCurrentPanel()?->getLayout());
+    }
 }
