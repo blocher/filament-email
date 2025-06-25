@@ -57,7 +57,7 @@ class ViewEmail extends ViewRecord
     public function render(): View
 {
     return view('filament-email::html_view', [
-        'email' => $this->record, // assuming $this->record is your Email model
-    ]);
+        'email' => $this->record,
+    ])->layout(Filament::getCurrentPanel()?->getLayout());
 }
 }
